@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cica</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .container {
+            width: 95%;
+        }
+        h2 {
+            margin: 5px;
+        }
+        .keret {
+            background-color: white;
+            border: 1px solid lightgray;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .keret img {
+            width: 100%;
+            display: block;
+        }
+        .box3 {
+                display: none;
+                
+            }
+        
+
+        #kepek1 {
+            display: inline-block;
+            width: calc(50% - 5px);
+            padding-right: 5px;
+        }
+        #kepek2 {
+               display: inline-block;
+               width: calc(50% - 5px);
+        }
+        .kepek img {
+            padding-bottom: 10px;
+        }
+        @media (min-width: 700px) {
+            .boxok {
+                display: flex;
+                gap: 10px;
+            }
+            .boxok .keret {
+              flex: 1; 
+            }
+        }
+        @media (min-width: 1400px) {
+            .box3 {
+               display: block;
+               
+            }
+        }
+    </style>
+</head>
+<body  onload="meret()" onresize="meret()">
+    <div class="container">
+        <div class="boxok">
+            <div class="keret">
+                <h2>Legújabb hírek</h2>
+                <img src="cica7.jpg" alt="Cica 1">
+                <p>Ez egy  szép szürke cica zöld szemmel az ágyon.</p>
+                <img src="cica8.jpg" alt="Cica 2">
+                <p>Ez egy színes szőrű bundás cica.</p>
+            </div>
+            <div class="keret">
+                <h2>További hírek</h2>
+                <img src="cica9.jpg" alt="Cica 3">
+                <p>Még egy cica  ami épp egy karton dobozból néz ki boci szemekkel.</p>
+                <img src="cica10.jpg" alt="Cica 4">
+                <p>Ez is egy cica ami úgy fekszik mint egy alfa és nagyon magabiztosnak néz ki.</p>
+            </div>
+            <div class="keret box3">
+                <h2>Képek</h2>
+                <div class="kepek" id="kepek1">
+                    <img src="cica1.jpg" alt="Cica 5">
+                    <img src="cica2.jpg" alt="Cica 6">
+                    <img src="cica3.jpg" alt="Cica 7">
+                    
+                </div>
+                <div class="kepek" id="kepek2">
+                    <img src="cica4.jpg" alt="Cica 8">
+                    <img src="cica5.jpg" alt="Cica 9">
+                    <img src="cica6.jpg" alt="Cica 10">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function meret() {
+            const szelesseg = document.querySelector("html").clientWidth;
+        document.querySelector("title").innerHTML="Cica "+"("+szelesseg+"px)";
+        }
+        
+    </script>
+</body>
+</html>
